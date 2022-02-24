@@ -24,7 +24,7 @@ class App extends Component {
             <Route path="/searchMovie" element ={<SearchMovie/>} />
             <Route path="/showGrid" element ={<ShowGrid/>} />
             <Route path="/showList" element ={<ShowList/>} />
-            <Route path="movies/:id/movie" element ={<Movie/>} />
+            <Route path="/movies/:id" element ={<Movie/>} />
         </Routes>
         </div>
       </>

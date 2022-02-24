@@ -1,16 +1,18 @@
 import {useState,useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
  export default function Movie () {
-
+    
   const [movie, setMovies] = useState([]);
 
+  const {id} =useParams();
+  
   useEffect(() => {
       getMovie();
   }, []);
 
-    const {id} =useParams();
+    
 
     function getMovie() {
         axios.get(`http://localhost:8080/workSpace/taranom.yousefi-finalProject/my-app/api/movie/${id}`).then(function(response) {
